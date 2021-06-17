@@ -70,14 +70,14 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `backgroundColor` on `attributedString`
-    override open var backgroundColor: UIColor? {
+    /// Get and set via `textBackgroundColor` on `attributedString`
+    open var textBackgroundColor: UIColor? {
         get {
             // No super
-            return attributedString.backgroundColor
+            return attributedString.textBackgroundColor
         }
         set {
-            attributedString.backgroundColor = newValue
+            attributedString.textBackgroundColor = newValue
         }
     }
 

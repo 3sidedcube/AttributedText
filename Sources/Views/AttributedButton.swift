@@ -125,23 +125,23 @@ open class AttributedButton: UIButton {
         attributedMap[state].textColor = textColor
     }
 
-    /// Get `backgroundColor` on `attributedMap` for `state`
+    /// Get `textBackgroundColor` on `attributedMap` for `state`
     ///
     /// - Parameter state: `UIControl.State`
-    open func titleLabelBackgroundColor(for state: UIControl.State) -> UIColor? {
-        return attributedMap[state].backgroundColor
+    open func titleTextBackgroundColor(for state: UIControl.State) -> UIColor? {
+        return attributedMap[state].textBackgroundColor
     }
 
-    /// Set `backgroundColor` on `attributedMap` for `state`
+    /// Set `textBackgroundColor` on `attributedMap` for `state`
     ///
     /// - Parameters:
-    ///   - backgroundColor: `UIColor`
+    ///   - textBackgroundColor: `UIColor`
     ///   - state: `UIControl.State`
-    open func setTitleLabelBackgroundColor(
-        _ backgroundColor: UIColor?,
+    open func setTitleTextBackgroundColor(
+        _ textBackgroundColor: UIColor?,
         for state: UIControl.State
     ) {
-        attributedMap[state].backgroundColor = backgroundColor
+        attributedMap[state].textBackgroundColor = textBackgroundColor
     }
 
     /// Get `letterSpacing` on `attributedMap` for `state`

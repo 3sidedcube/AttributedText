@@ -32,7 +32,7 @@ public extension AttributedString {
     }
 
     /// Background color behind the text
-    var backgroundColor: UIColor? {
+    var textBackgroundColor: UIColor? {
         get {
             return attributes[.backgroundColor] as? UIColor
         }
