@@ -29,6 +29,10 @@ public struct AttributedString {
         self.attributes = [:]
     }
 
+    /// Initialize with `attributedString`
+    ///
+    /// - Parameters:
+    ///   - attributedString: `NSAttributedString`
     public init(_ attributedString: NSAttributedString) {
         self.text = attributedString.string
         self.attributes = attributedString.attributes(at: 0, effectiveRange: nil)

@@ -10,37 +10,48 @@
 import UIKit
 
 /// A `UILabel ` wrapping an `AttributedString`
-class AttributedLabel: InsetLabel {
+///
+/// - Warning:
+/// Only getter/setter properties declared on `AttributedString` are supported
+open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
-    private var attributedString = AttributedString() {
+    public private(set) var attributedString = AttributedString() {
         didSet {
-            attributedText = attributedString.attributedString
+            super.attributedText = self.attributedText
         }
     }
 
-    // MARK: - Override
+    // MARK: - NSAttributedString
 
-    /// Setting the `attributedText` should update the `attributedString`
-    override var attributedText: NSAttributedString? {
-        didSet {
-            attributedString = AttributedString(attributedText ?? NSAttributedString())
+    /// Get and set via `attributedString`
+    override open var attributedText: NSAttributedString? {
+        get {
+            // No super
+            return attributedString.attributedString
+        }
+        set {
+            attributedString = AttributedString(newValue ?? NSAttributedString())
         }
     }
+
+    // MARK: - Properties
 
     /// Get and set via `text` on `attributedString`
-    override var text: String? {
+    override open var text: String? {
         get {
+            // No super
             return attributedString.text
         }
         set {
-            attributedString.text = newValue ?? ""
+            attributedString.text = newValue
         }
     }
 
     /// Get and set via `font` on `attributedString`
-    override var font: UIFont? {
+    override open var font: UIFont? {
         get {
+            // No super
             return attributedString.font
         }
         set {
@@ -49,8 +60,9 @@ class AttributedLabel: InsetLabel {
     }
 
     /// Get and set via `textColor` on `attributedString`
-    override var textColor: UIColor? {
+    override open var textColor: UIColor? {
         get {
+            // No super
             return attributedString.textColor
         }
         set {
@@ -59,12 +71,55 @@ class AttributedLabel: InsetLabel {
     }
 
     /// Get and set via `backgroundColor` on `attributedString`
-    override var backgroundColor: UIColor? {
+    override open var backgroundColor: UIColor? {
         get {
+            // No super
             return attributedString.backgroundColor
         }
         set {
             attributedString.backgroundColor = newValue
+        }
+    }
+
+    /// Get and set via `letterSpacing` on `attributedString`
+    open var letterSpacing: CGFloat? {
+        get {
+            return attributedString.letterSpacing
+        }
+        set {
+            attributedString.letterSpacing = newValue
+        }
+    }
+
+    /// Get and set via `textAlignment` on `attributedString`
+    override open var textAlignment: NSTextAlignment {
+        get {
+            // No super
+            return attributedString.textAlignment
+        }
+        set {
+            attributedString.textAlignment = newValue
+        }
+    }
+
+    /// Get and set via `lineBreakMode` on `attributedString`
+    override open var lineBreakMode: NSLineBreakMode {
+        get {
+            // No super
+            return attributedString.lineBreakMode
+        }
+        set {
+            attributedString.lineBreakMode = newValue
+        }
+    }
+
+    /// Get and set via `lineHeight` on `attributedString`
+    open var lineHeight: CGFloat? {
+        get {
+            return attributedString.lineHeight
+        }
+        set {
+            attributedString.lineHeight = newValue
         }
     }
 }

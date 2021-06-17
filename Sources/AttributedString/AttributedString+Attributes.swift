@@ -52,23 +52,23 @@ public extension AttributedString {
     }
 
     /// Alignment of the text
-    var textAlignment: NSTextAlignment? {
+    var textAlignment: NSTextAlignment {
         mutating get {
             return paragraphStyle().alignment
         }
         set {
-            paragraphStyle().alignment = newValue ?? .default
+            paragraphStyle().alignment = newValue
         }
     }
 
 
     /// Line break mode of the text
-    var lineBreakMode: NSLineBreakMode? {
+    var lineBreakMode: NSLineBreakMode {
         mutating get {
             return paragraphStyle().lineBreakMode
         }
         set {
-            paragraphStyle().lineBreakMode = newValue ?? .default
+            paragraphStyle().lineBreakMode = newValue
         }
     }
 
