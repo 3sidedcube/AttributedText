@@ -35,6 +35,10 @@ public struct AttributedString {
     ///   - attributedString: `NSAttributedString`
     public init(_ attributedString: NSAttributedString) {
         self.text = attributedString.string
+        guard attributedString.length > 0 else {
+            self.attributes = [:]
+            return
+        }
         self.attributes = attributedString.attributes(at: 0, effectiveRange: nil)
     }
 }
