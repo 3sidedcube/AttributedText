@@ -22,7 +22,7 @@ open class AttributedButton: UIButton {
 
     /// Map `UIControl.State` to a wrapped `AttributedString`
     /// Each `UIControl.State` will have its own `AttributedString`
-    public private(set) var attributedMap = AttributedStringMap() {
+    public var attributedMap = AttributedStringMap() {
         didSet {
             guard setAttributedTitle else { return }
             attributedMap.attributedMap.forEach {

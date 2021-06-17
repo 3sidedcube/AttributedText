@@ -16,7 +16,7 @@ import UIKit
 open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
-    public private(set) var attributedString = AttributedString() {
+    public var attributedString = AttributedString() {
         didSet {
             super.attributedText = self.attributedText
         }
