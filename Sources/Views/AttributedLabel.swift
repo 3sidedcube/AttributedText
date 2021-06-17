@@ -12,23 +12,23 @@ import UIKit
 /// A `UILabel ` wrapping an `AttributedString`
 class AttributedLabel: UILabel {
 
+    /// Wrapped `AttributedString`
     private var attributedString = AttributedString() {
         didSet {
             attributedText = attributedString.attributedString
         }
     }
 
+    // MARK: - Override
+
+    /// Setting the `attributedText` should update the `attributedString`
     override var attributedText: NSAttributedString? {
         didSet {
-            guard let attributedText = attributedText else {
-                attributedString = AttributedString()
-                return
-            }
-
-            attributedString = AttributedString(attributedText)
+            attributedString = AttributedString(attributedText ?? NSAttributedString())
         }
     }
 
+    /// Get and set via `text` on `attributedString`
     override var text: String? {
         get {
             return attributedString.text
@@ -38,6 +38,7 @@ class AttributedLabel: UILabel {
         }
     }
 
+    /// Get and set via `font` on `attributedString`
     override var font: UIFont? {
         get {
             return attributedString.font
@@ -47,6 +48,7 @@ class AttributedLabel: UILabel {
         }
     }
 
+    /// Get and set via `textColor` on `attributedString`
     override var textColor: UIColor? {
         get {
             return attributedString.textColor
@@ -56,6 +58,7 @@ class AttributedLabel: UILabel {
         }
     }
 
+    /// Get and set via `backgroundColor` on `attributedString`
     override var backgroundColor: UIColor? {
         get {
             return attributedString.backgroundColor
