@@ -106,7 +106,7 @@ open class AttributedButton: UIButton {
     /// Get `textColor` on `attributedMap` for `state`
     ///
     /// - Parameter state: `UIControl.State`
-    open override func titleColor(
+    override open func titleColor(
         for state: UIControl.State
     ) -> UIColor? {
         // No super
@@ -200,7 +200,6 @@ open class AttributedButton: UIButton {
     ) {
         attributedMap[state].lineBreakMode = lineBreakMode
     }
-
 
     /// Get `lineHeight` on `attributedMap` for `state`
     ///

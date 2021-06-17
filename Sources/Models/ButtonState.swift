@@ -28,7 +28,7 @@ public final class ButtonState: NSObject {
 
 extension ButtonState {
 
-    static func ==(lhs: ButtonState, rhs: ButtonState) -> Bool {
+    static func == (lhs: ButtonState, rhs: ButtonState) -> Bool {
         return lhs.state == rhs.state
     }
 }

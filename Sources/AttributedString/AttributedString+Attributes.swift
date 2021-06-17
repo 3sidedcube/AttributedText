@@ -61,7 +61,6 @@ public extension AttributedString {
         }
     }
 
-
     /// Line break mode of the text
     var lineBreakMode: NSLineBreakMode {
         mutating get {
