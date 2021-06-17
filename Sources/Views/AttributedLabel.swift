@@ -10,7 +10,7 @@
 import UIKit
 
 /// A `UILabel ` wrapping an `AttributedString`
-class AttributedLabel: UILabel {
+class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
     private var attributedString = AttributedString() {
