@@ -54,10 +54,11 @@ public extension AttributedString {
     /// Style of underline
     var underlineStyle: NSUnderlineStyle? {
         get {
-            return attributes[.underlineStyle] as? NSUnderlineStyle
+            guard let value = attributes[.underlineStyle] as? Int else { return nil }
+            return NSUnderlineStyle(rawValue: value)
         }
         set {
-            attributes[.underlineStyle] = newValue
+            attributes[.underlineStyle] = newValue?.rawValue
         }
     }
 
