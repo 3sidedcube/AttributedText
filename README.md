@@ -8,6 +8,7 @@ Currently supported properties which map to `NSAttributedString.Key` (See file `
 * `textColor` (key: `.foregroundColor`)
 * `textBackgroundColor` (key: `.backgroundColor`)
 * `letterSpacing` (key: `.kern`)
+* `underlineStyle` (key: `.underlineStyle`)
 * `textAlignment` (key: `.paragraphStyle` - `.alignment`)
 * `lineBreakMode` (key: `.paragraphStyle` - `.lineBreakMode`)
 * `lineHeight` (key: `.paragraphStyle` - `.lineHeightMultiple` & `.lineSpacing`)

@@ -51,6 +51,16 @@ public extension AttributedString {
         }
     }
 
+    /// Style of underline
+    var underlineStyle: NSUnderlineStyle? {
+        get {
+            return attributes[.underlineStyle] as? NSUnderlineStyle
+        }
+        set {
+            attributes[.underlineStyle] = newValue
+        }
+    }
+
     /// Alignment of the text
     var textAlignment: NSTextAlignment {
         mutating get {

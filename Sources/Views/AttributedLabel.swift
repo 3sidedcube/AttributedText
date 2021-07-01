@@ -91,6 +91,16 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
+    /// Get and set via `underlineStyle` on `attributedString`
+    open var underlineStyle: NSUnderlineStyle? {
+        get {
+            return attributedString.underlineStyle
+        }
+        set {
+            attributedString.underlineStyle = newValue
+        }
+    }
+
     /// Get and set via `textAlignment` on `attributedString`
     override open var textAlignment: NSTextAlignment {
         get {
