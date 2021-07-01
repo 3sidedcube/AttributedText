@@ -31,9 +31,6 @@
 		OBJ_46 /* NSTextAlignment+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NSTextAlignment+Defaults.swift */; };
 		OBJ_47 /* UIButton+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* UIButton+AttributedString.swift */; };
 		OBJ_48 /* UILabel+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* UILabel+AttributedString.swift */; };
-		OBJ_49 /* AttributedStringMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AttributedStringMap.swift */; };
-		OBJ_50 /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ButtonState.swift */; };
-		OBJ_51 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* AttributedButton.swift */; };
 		OBJ_52 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AttributedLabel.swift */; };
 		OBJ_53 /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* InsetLabel.swift */; };
 		OBJ_60 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -70,9 +67,6 @@
 		OBJ_17 /* NSTextAlignment+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Defaults.swift"; sourceTree = "<group>"; };
 		OBJ_18 /* UIButton+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AttributedString.swift"; sourceTree = "<group>"; };
 		OBJ_19 /* UILabel+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AttributedString.swift"; sourceTree = "<group>"; };
-		OBJ_21 /* AttributedStringMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringMap.swift; sourceTree = "<group>"; };
-		OBJ_22 /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
-		OBJ_24 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
 		OBJ_25 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		OBJ_26 /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
 		OBJ_29 /* AttributedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringTests.swift; sourceTree = "<group>"; };
@@ -112,19 +106,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		OBJ_20 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_21 /* AttributedStringMap.swift */,
-				OBJ_22 /* ButtonState.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		OBJ_23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* AttributedButton.swift */,
 				OBJ_25 /* AttributedLabel.swift */,
 				OBJ_26 /* InsetLabel.swift */,
 			);
@@ -157,7 +141,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -166,7 +150,6 @@
 				OBJ_30 /* Products */,
 				OBJ_33 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -174,7 +157,6 @@
 			children = (
 				OBJ_8 /* AttributedString */,
 				OBJ_14 /* Extensions */,
-				OBJ_20 /* Models */,
 				OBJ_23 /* Views */,
 			);
 			path = Sources;
@@ -259,7 +241,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,9 +290,6 @@
 				OBJ_46 /* NSTextAlignment+Defaults.swift in Sources */,
 				OBJ_47 /* UIButton+AttributedString.swift in Sources */,
 				OBJ_48 /* UILabel+AttributedString.swift in Sources */,
-				OBJ_49 /* AttributedStringMap.swift in Sources */,
-				OBJ_50 /* ButtonState.swift in Sources */,
-				OBJ_51 /* AttributedButton.swift in Sources */,
 				OBJ_52 /* AttributedLabel.swift in Sources */,
 				OBJ_53 /* InsetLabel.swift in Sources */,
 			);
