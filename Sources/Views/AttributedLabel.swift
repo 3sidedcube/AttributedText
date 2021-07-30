@@ -14,6 +14,8 @@ import UIKit
 /// - Warning:
 /// Only getter/setter properties declared on `AttributedString` are supported
 open class AttributedLabel: InsetLabel {
+    
+    // MARK: - Properties
 
     /// Get and set via `text` on `attributedString`
     override open var text: String? {
