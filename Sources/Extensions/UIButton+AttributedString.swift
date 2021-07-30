@@ -11,11 +11,19 @@ import UIKit
 
 public extension UIButton {
 
-    /// Set the given `attributedString`
+    /// Set the given `attributedString` for `state`
     ///
-    /// - Parameter attributedString: `AttributedString`
-    func setAttributedString(_ attributedString: AttributedString) {
-        titleLabel?.attributedText = attributedString.attributedString
+    /// - Parameters:
+    ///   - attributedString: `AttributedString`
+    ///   - state: `UIControl.State`
+    func setAttributedTitle(
+        _ attributedString: AttributedString,
+        for state: UIControl.State
+    ) {
+        setAttributedTitle(
+            attributedString.attributedString,
+            for: state
+        )
     }
 }
 

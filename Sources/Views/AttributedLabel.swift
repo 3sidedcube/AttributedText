@@ -22,7 +22,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.text
         }
         set {
-            attributedString.text = newValue
+            updating { $0.text = newValue }
         }
     }
 
@@ -33,7 +33,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.font
         }
         set {
-            attributedString.font = newValue
+            updating { $0.font = newValue }
         }
     }
 
@@ -44,7 +44,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textColor
         }
         set {
-            attributedString.textColor = newValue
+            updating { $0.textColor = newValue }
         }
     }
 
@@ -55,7 +55,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textBackgroundColor
         }
         set {
-            attributedString.textBackgroundColor = newValue
+            updating { $0.textBackgroundColor = newValue }
         }
     }
 
@@ -65,7 +65,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.letterSpacing
         }
         set {
-            attributedString.letterSpacing = newValue
+            updating { $0.letterSpacing = newValue }
         }
     }
 
@@ -75,7 +75,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.underlineStyle
         }
         set {
-            attributedString.underlineStyle = newValue
+            updating { $0.underlineStyle = newValue }
         }
     }
 
@@ -86,7 +86,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textAlignment
         }
         set {
-            attributedString.textAlignment = newValue
+            updating { $0.textAlignment = newValue }
         }
     }
 
@@ -97,7 +97,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.lineBreakMode
         }
         set {
-            attributedString.lineBreakMode = newValue
+            updating { $0.lineBreakMode = newValue }
         }
     }
 
@@ -107,7 +107,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.lineHeight
         }
         set {
-            attributedString.lineHeight = newValue
+            updating { $0.lineHeight = newValue }
         }
     }
 }

@@ -20,6 +20,15 @@ public extension UILabel {
             attributedText = newValue.attributedString
         }
     }
+
+    /// Update `attributedString` with `block` and set `attributedText`
+    ///
+    /// - Parameter block: Closure to update `AttributedString`
+    internal func updating(block: (inout AttributedString) -> Void) {
+        var attributedString = self.attributedString
+        block(&attributedString)
+        attributedText = attributedString.attributedString
+    }
 }
 
 #endif
