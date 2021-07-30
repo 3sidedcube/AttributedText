@@ -22,7 +22,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.text
         }
         set {
-            updating { $0.text = newValue }
+            updating { $0.text = newValue ?? "" }
         }
     }
 

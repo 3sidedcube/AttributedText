@@ -16,7 +16,7 @@ import UIKit
 public struct AttributedString {
 
     /// Text to draw
-    public var text: String?
+    public var text: String
 
     /// `Attributes` of key value pairs
     public internal(set) var attributes: Attributes
@@ -28,7 +28,7 @@ public struct AttributedString {
     /// - Parameters:
     ///   - text: `String`
     public init(text: String? = nil) {
-        self.text = text
+        self.text = text ?? ""
         self.attributes = [:]
     }
 
