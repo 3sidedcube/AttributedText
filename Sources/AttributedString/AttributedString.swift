@@ -12,7 +12,7 @@ import UIKit
 /// Wrapper of `NSAttributedString`
 ///
 /// - Warning:
-/// This does not take range into account (it wraps a dictionary of attributes to be set over a fixed range).
+/// This does not take range into account; it wraps a dictionary of attributes to be set over a fixed range.
 public struct AttributedString {
 
     /// Text to draw
