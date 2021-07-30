@@ -10,6 +10,9 @@
 import UIKit
 
 /// Wrapper of `NSAttributedString`
+///
+/// - Warning:
+/// This does not take range into account (it wraps a dictionary of attributes to be set over a fixed range).
 public struct AttributedString {
 
     /// Text to draw
@@ -30,6 +33,10 @@ public struct AttributedString {
     }
 
     /// Initialize with `attributedString`
+    ///
+    /// - Warning:
+    /// As `AttributedString` wraps attributes over a fixed range, if `attributedString`
+    /// has different attributes at different ranges, then those differences will be lost.
     ///
     /// - Parameters:
     ///   - attributedString: `NSAttributedString`

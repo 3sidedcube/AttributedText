@@ -15,28 +15,6 @@ import UIKit
 /// Only getter/setter properties declared on `AttributedString` are supported
 open class AttributedLabel: InsetLabel {
 
-    /// Wrapped `AttributedString`
-    public var attributedString = AttributedString() {
-        didSet {
-            super.attributedText = self.attributedText
-        }
-    }
-
-    // MARK: - NSAttributedString
-
-    /// Get and set via `attributedString`
-    override open var attributedText: NSAttributedString? {
-        get {
-            // No super
-            return attributedString.attributedString
-        }
-        set {
-            attributedString = AttributedString(newValue ?? NSAttributedString())
-        }
-    }
-
-    // MARK: - Properties
-
     /// Get and set via `text` on `attributedString`
     override open var text: String? {
         get {

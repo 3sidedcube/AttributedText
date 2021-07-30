@@ -11,11 +11,14 @@ import UIKit
 
 public extension UILabel {
 
-    /// Set the given `attributedString`
-    ///
-    /// - Parameter attributedString: `AttributedString`
-    func setAttributedString(_ attributedString: AttributedString) {
-        attributedText = attributedString.attributedString
+    /// Get and set `attributedText` mapping to and from  `AttributedString`
+    var attributedString: AttributedString {
+        get {
+            return AttributedString(attributedText ?? NSAttributedString())
+        }
+        set {
+            attributedText = newValue.attributedString
+        }
     }
 }
 
