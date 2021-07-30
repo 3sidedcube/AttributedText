@@ -35,8 +35,10 @@ public struct AttributedString {
     /// Initialize with `attributedString`
     ///
     /// - Warning:
-    /// As `AttributedString` wraps attributes over a fixed range, if `attributedString`
+    /// 1. As `AttributedString` wraps attributes over a fixed range, if `attributedString`
     /// has different attributes at different ranges, then those differences will be lost.
+    /// 2. If the `attributedString` is empty, then the attributes can not be determined
+    /// (as there is no range)
     ///
     /// - Parameters:
     ///   - attributedString: `NSAttributedString`

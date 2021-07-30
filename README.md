@@ -17,3 +17,6 @@ Currently supported properties which map to `NSAttributedString.Key` (See file `
 * `lineHeight` (key: `.paragraphStyle` - `.lineHeightMultiple` & `.lineSpacing`)
 
 `text` is a stored property as it doesn't have corresponding `NSAttributedString.Key` like the others. 
+
+## Warning:
+An `NSAttributedString` with empty text has no attributes (because it has no range). 

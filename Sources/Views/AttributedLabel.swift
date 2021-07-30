@@ -14,7 +14,26 @@ import UIKit
 /// - Warning:
 /// Only getter/setter properties declared on `AttributedString` are supported
 open class AttributedLabel: InsetLabel {
-    
+
+    /// Wrapped `AttributedString`
+    public var attributedString = AttributedString() {
+        didSet {
+            super.attributedText = self.attributedText
+        }
+    }
+
+    // MARK: - NSAttributedString
+    /// Get and set via `attributedString`
+    override open var attributedText: NSAttributedString? {
+        get {
+            // No super
+            return attributedString.attributedString
+        }
+        set {
+            attributedString = AttributedString(newValue ?? NSAttributedString())
+        }
+    }
+
     // MARK: - Properties
 
     /// Get and set via `text` on `attributedString`
@@ -24,7 +43,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.text
         }
         set {
-            updating { $0.text = newValue ?? "" }
+            attributedString.text = newValue ?? ""
         }
     }
 
@@ -35,7 +54,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.font
         }
         set {
-            updating { $0.font = newValue }
+            attributedString.font = newValue
         }
     }
 
@@ -46,7 +65,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textColor
         }
         set {
-            updating { $0.textColor = newValue }
+            attributedString.textColor = newValue
         }
     }
 
@@ -57,7 +76,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textBackgroundColor
         }
         set {
-            updating { $0.textBackgroundColor = newValue }
+            attributedString.textBackgroundColor = newValue
         }
     }
 
@@ -67,7 +86,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.letterSpacing
         }
         set {
-            updating { $0.letterSpacing = newValue }
+            attributedString.letterSpacing = newValue
         }
     }
 
@@ -77,7 +96,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.underlineStyle
         }
         set {
-            updating { $0.underlineStyle = newValue }
+            attributedString.underlineStyle = newValue
         }
     }
 
@@ -88,7 +107,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.textAlignment
         }
         set {
-            updating { $0.textAlignment = newValue }
+            attributedString.textAlignment = newValue
         }
     }
 
@@ -99,7 +118,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.lineBreakMode
         }
         set {
-            updating { $0.lineBreakMode = newValue }
+            attributedString.lineBreakMode = newValue
         }
     }
 
@@ -109,7 +128,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.lineHeight
         }
         set {
-            updating { $0.lineHeight = newValue }
+            attributedString.lineHeight = newValue
         }
     }
 }

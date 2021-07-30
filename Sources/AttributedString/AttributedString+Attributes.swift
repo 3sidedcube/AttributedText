@@ -84,6 +84,9 @@ public extension AttributedString {
 
     /// Height of each line of text
     ///
+    /// - Warning:
+    /// Uses `font` in the calculation of line height
+    ///
     /// - Note:
     /// Requires `font` to be defined first
     var lineHeight: CGFloat? {

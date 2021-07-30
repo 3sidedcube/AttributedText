@@ -11,22 +11,10 @@ import UIKit
 
 public extension UILabel {
 
-    /// Get and set `attributedText` mapping to and from  `AttributedString`
-    var attributedString: AttributedString {
-        get {
-            return AttributedString(attributedText ?? NSAttributedString())
-        }
-        set {
-            attributedText = newValue.attributedString
-        }
-    }
-
-    /// Update `attributedString` with `block` and set `attributedText`
+    /// Set the given `attributedString`
     ///
-    /// - Parameter block: Closure to update `AttributedString`
-    internal func updating(block: (inout AttributedString) -> Void) {
-        var attributedString = self.attributedString
-        block(&attributedString)
+    /// - Parameter attributedString: `AttributedString`
+    func setAttributedString(_ attributedString: AttributedString) {
         attributedText = attributedString.attributedString
     }
 }

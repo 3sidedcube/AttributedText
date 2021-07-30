@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import AttributedString
 
+// swiftlint:disable force_cast
+
 /// Example `UITableViewController`
 class ExampleTableViewController: UITableViewController {
 
@@ -19,7 +21,8 @@ class ExampleTableViewController: UITableViewController {
     private var styles: [StyleHandler] {
         return [
             Self.default(_:),
-            Self.settingText(_:)
+            Self.settingText(_:),
+            Self.textColor(_:)
         ]
     }
 
@@ -52,14 +55,24 @@ class ExampleTableViewController: UITableViewController {
     private static func settingText(_ label: Label) {
         var attributedString = AttributedString()
 
+        attributedString.text = " "
         attributedString.textColor = .green
         attributedString.letterSpacing = 2
         attributedString.lineHeight = 20
         attributedString.textAlignment = .left
-        attributedString.underlineStyle = .byWord
 
         label.attributedString = attributedString
         label.text = "Setting text"
+        attributedString.underlineStyle = .byWord
+    }
+
+    private static func textColor(_ label: Label) {
+        var attributedString = AttributedString()
+
+        attributedString.text = "Text Color"
+        attributedString.textColor = .green
+        label.attributedString = attributedString
+        label.textColor = .purple
     }
 
     // MARK: - ViewController lifecycle
