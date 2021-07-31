@@ -17,7 +17,12 @@ typealias Label = AttributedLabel
 class LabelCell: UITableViewCell {
 
     /// `Label`
-    private(set) lazy var label = Label()
+    private(set) lazy var label: Label = {
+        let label = Label()
+        label.backgroundColor = .clear
+        label.numberOfLines = 0
+        return label
+    }()
 
     // MARK: - Init
 

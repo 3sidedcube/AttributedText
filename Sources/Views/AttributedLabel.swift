@@ -9,13 +9,19 @@
 #if os(iOS)
 import UIKit
 
-/// A `UILabel ` wrapping an `AttributedString`
+/// A `UILabel ` wrapping an `AttributedString`.
 ///
 /// - Warning:
-/// Only getter/setter properties declared on `AttributedString` are supported
+/// 1. Only getter/setter properties declared on `AttributedString` are supported.
+/// 2. The `attributedText` gets and sets `attributedString`, so to
+/// set multiple attributes at different ranges use a `UILabel`
 open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
+    ///
+    /// - Warning:
+    /// May be out of sync with `attributedText` if `attributedText` is set explicitly
+    /// and there are different attributes over different ranges
     public var attributedString = AttributedString() {
         didSet {
             super.attributedText = self.attributedText
@@ -23,6 +29,7 @@ open class AttributedLabel: InsetLabel {
     }
 
     // MARK: - NSAttributedString
+
     /// Get and set via `attributedString`
     override open var attributedText: NSAttributedString? {
         get {

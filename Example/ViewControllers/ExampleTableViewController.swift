@@ -20,9 +20,9 @@ class ExampleTableViewController: UITableViewController {
     /// `StyleHandler`s
     private var styles: [StyleHandler] {
         return [
-            Self.default(_:),
-            Self.settingText(_:),
-            Self.textColor(_:)
+            Self.default,
+            Self.settingText,
+            Self.textColor
         ]
     }
 
@@ -62,16 +62,19 @@ class ExampleTableViewController: UITableViewController {
         attributedString.textAlignment = .left
 
         label.attributedString = attributedString
+
         label.text = "Setting text"
-        attributedString.underlineStyle = .byWord
+        label.underlineStyle = .single
     }
 
     private static func textColor(_ label: Label) {
         var attributedString = AttributedString()
 
         attributedString.text = "Text Color"
-        attributedString.textColor = .green
+        attributedString.textColor = .orange
+
         label.attributedString = attributedString
+
         label.textColor = .purple
     }
 
@@ -79,6 +82,9 @@ class ExampleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableView.automaticDimension
 
         tableView.register(
             LabelCell.self,
