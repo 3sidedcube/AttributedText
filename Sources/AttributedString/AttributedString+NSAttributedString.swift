@@ -13,7 +13,7 @@ public extension AttributedString {
 
     /// Map to and from `NSAttributedString`
     var attributedString: NSAttributedString {
-        return NSAttributedString(string: text ?? "", attributes: attributes)
+        return NSAttributedString(string: text, attributes: attributes)
     }
 }
 

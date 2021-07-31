@@ -10,10 +10,15 @@
 import UIKit
 
 /// Wrapper of `NSAttributedString`
+///
+/// - Warning:
+/// This does not take range into account; it wraps a dictionary of attributes to be set over a *fixed* range.
+/// For different attributes across multiple ranges, either use multiple `AttributedString`s or
+/// (the wrapped) `NSAttributedString`.
 public struct AttributedString {
 
     /// Text to draw
-    public var text: String?
+    public var text: String
 
     /// `Attributes` of key value pairs
     public internal(set) var attributes: Attributes
@@ -23,13 +28,19 @@ public struct AttributedString {
     /// Default public memberwise initializer
     ///
     /// - Parameters:
-    ///   - text: `String`
+    ///   - text: `String` - `nil` will be set to empty string
     public init(text: String? = nil) {
-        self.text = text
+        self.text = text ?? ""
         self.attributes = [:]
     }
 
     /// Initialize with `attributedString`
+    ///
+    /// - Warning:
+    /// 1. As `AttributedString` wraps attributes over a fixed range, if `attributedString`
+    /// has different attributes at different ranges, then those differences will be lost.
+    /// 2. If the `attributedString` is empty, then the attributes can not be determined
+    /// (as there is no range to enumerate attributes over)
     ///
     /// - Parameters:
     ///   - attributedString: `NSAttributedString`

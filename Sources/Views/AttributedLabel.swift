@@ -9,10 +9,12 @@
 #if os(iOS)
 import UIKit
 
-/// A `UILabel ` wrapping an `AttributedString`
+/// A `UILabel ` wrapping an `AttributedString`.
 ///
 /// - Warning:
-/// Only getter/setter properties declared on `AttributedString` are supported
+/// 1. Only getter/setter properties declared on `AttributedString` are supported.
+/// 2. The `attributedText` gets and sets `attributedString`, so to
+/// set multiple attributes at different ranges use a `UILabel`
 open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
@@ -44,7 +46,7 @@ open class AttributedLabel: InsetLabel {
             return attributedString.text
         }
         set {
-            attributedString.text = newValue
+            attributedString.text = newValue ?? ""
         }
     }
 
