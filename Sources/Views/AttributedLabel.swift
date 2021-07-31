@@ -18,10 +18,6 @@ import UIKit
 open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedString`
-    ///
-    /// - Warning:
-    /// May be out of sync with `attributedText` if `attributedText` is set explicitly
-    /// and there are different attributes over different ranges
     public var attributedString = AttributedString() {
         didSet {
             super.attributedText = self.attributedText
