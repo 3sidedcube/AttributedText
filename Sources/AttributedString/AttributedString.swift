@@ -21,17 +21,18 @@ public struct AttributedString {
     public var text: String
 
     /// `Attributes` of key value pairs
-    public internal(set) var attributes: Attributes
+    public var attributes: Attributes
 
     // MARK: - Init
 
     /// Default public memberwise initializer
     ///
     /// - Parameters:
-    ///   - text: `String` - `nil` will be set to empty string
-    public init(text: String? = nil) {
-        self.text = text ?? ""
-        self.attributes = [:]
+    ///   - text: `String` - defaults to empty string
+    ///   - attributes: `Attributes` - defaults to empty dictionary
+    public init(text: String = "", attributes: Attributes = [:]) {
+        self.text = text
+        self.attributes = attributes
     }
 
     /// Initialize with `attributedString`
