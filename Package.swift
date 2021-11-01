@@ -1,29 +1,29 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "AttributedString",
+    name: "AttributedText",
     platforms: [
         .iOS(.v12)
     ],
     products: [
         .library(
-            name: "AttributedString",
-            targets: ["AttributedString"])
+            name: "AttributedText",
+            targets: ["AttributedText"])
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "AttributedString",
+            name: "AttributedText",
             dependencies: [],
             path: "Sources"
         ),
         .testTarget(
-            name: "AttributedStringTests",
-            dependencies: ["AttributedString"]
+            name: "AttributedTextTests",
+            dependencies: ["AttributedText"]
         )
     ]
 )

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import AttributedString
+import AttributedText
 
 // swiftlint:disable force_cast
 
@@ -41,7 +41,7 @@ class ExampleTableViewController: UITableViewController {
     // MARK: - Styles
 
     private static func `default`(_ label: Label) {
-        var attributedString = AttributedString()
+        var attributedString = AttributedText()
 
         attributedString.text = "Default"
         attributedString.textColor = .blue
@@ -53,7 +53,7 @@ class ExampleTableViewController: UITableViewController {
     }
 
     private static func settingText(_ label: Label) {
-        var attributedString = AttributedString()
+        var attributedString = AttributedText()
 
         attributedString.text = " "
         attributedString.textColor = .green
@@ -68,7 +68,7 @@ class ExampleTableViewController: UITableViewController {
     }
 
     private static func textColor(_ label: Label) {
-        var attributedString = AttributedString()
+        var attributedString = AttributedText()
 
         attributedString.text = "Text Color"
         attributedString.textColor = .orange
