@@ -15,6 +15,7 @@ import UIKit
 /// 1. Only getter/setter properties declared on `AttributedText` are supported.
 /// 2. The `attributedText` gets and sets `attributedString`, so to
 /// set multiple attributes at different ranges use a `UILabel`
+@available(*, deprecated, message: "Please use UILabel extension methods instead")
 open class AttributedLabel: InsetLabel {
 
     /// Wrapped `AttributedText`
