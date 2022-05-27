@@ -10,6 +10,7 @@
 import UIKit
 
 /// A `UILabel` where the drawn text can be inset
+@available(*, deprecated, message: "A container view with insets is recommended")
 open class InsetLabel: UILabel {
 
     /// `UIEdgeInsets` to inset text

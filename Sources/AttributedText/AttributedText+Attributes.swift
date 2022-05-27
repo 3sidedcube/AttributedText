@@ -62,6 +62,18 @@ public extension AttributedText {
         }
     }
 
+    /// The link for the text
+    var link: URL? {
+        get {
+            return attributes[.link] as? URL
+        }
+        set {
+            attributes[.link] = newValue
+        }
+    }
+
+    // MARK: - Paragraph Style
+
     /// Alignment of the text
     var textAlignment: NSTextAlignment {
         mutating get {
