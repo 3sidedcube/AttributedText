@@ -35,7 +35,7 @@ open class AttributedLabel: InsetLabel {
 
     // MARK: - NSAttributedString
 
-    /// Get and set via `attributedString`
+    /// Get and set `attributedString`
     override open var attributedText: NSAttributedString? {
         get {
             // No super
@@ -48,7 +48,7 @@ open class AttributedLabel: InsetLabel {
 
     // MARK: - Properties
 
-    /// Get and set via `text` on `attributedString`
+    /// Get and set `text` on `attributedString`
     override open var text: String? {
         get {
             // No super
@@ -59,7 +59,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `font` on `attributedString`
+    /// Get and set `font` on `attributedString`
     override open var font: UIFont? {
         get {
             // No super
@@ -70,7 +70,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `textColor` on `attributedString`
+    /// Get and set `textColor` on `attributedString`
     override open var textColor: UIColor? {
         get {
             // No super
@@ -81,7 +81,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `textBackgroundColor` on `attributedString`
+    /// Get and set `textBackgroundColor` on `attributedString`
     open var textBackgroundColor: UIColor? {
         get {
             // No super
@@ -92,7 +92,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `letterSpacing` on `attributedString`
+    /// Get and set `letterSpacing` on `attributedString`
     open var letterSpacing: CGFloat? {
         get {
             return attributedString.letterSpacing
@@ -102,7 +102,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `underlineStyle` on `attributedString`
+    /// Get and set `underlineStyle` on `attributedString`
     open var underlineStyle: NSUnderlineStyle? {
         get {
             return attributedString.underlineStyle
@@ -112,7 +112,17 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `textAlignment` on `attributedString`
+    /// Get and `link` on `attributedString`
+    open var link: URL? {
+        get {
+            return attributedString.link
+        }
+        set {
+            attributedString.link = newValue
+        }
+    }
+
+    /// Get and set `textAlignment` on `attributedString`
     override open var textAlignment: NSTextAlignment {
         get {
             // No super
@@ -123,7 +133,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `lineBreakMode` on `attributedString`
+    /// Get and set `lineBreakMode` on `attributedString`
     override open var lineBreakMode: NSLineBreakMode {
         get {
             // No super
@@ -134,7 +144,7 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set via `lineHeight` on `attributedString`
+    /// Get and set `lineHeight` on `attributedString`
     open var lineHeight: CGFloat? {
         get {
             return attributedString.lineHeight
