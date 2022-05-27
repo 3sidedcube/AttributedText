@@ -11,9 +11,8 @@ let package = Package(
     products: [
         .library(
             name: "AttributedText",
-            targets: ["AttributedText"])
-    ],
-    dependencies: [
+            targets: ["AttributedText"]
+        )
     ],
     targets: [
         .target(
