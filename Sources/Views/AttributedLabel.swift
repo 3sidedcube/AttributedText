@@ -144,13 +144,13 @@ open class AttributedLabel: InsetLabel {
         }
     }
 
-    /// Get and set `lineHeight` on `attributedString`
-    open var lineHeight: CGFloat? {
+    /// Get and set `lineHeightMultiple` on `attributedString`
+    open var lineHeightMultiple: CGFloat {
         get {
-            return attributedString.lineHeight
+            return attributedString.lineHeightMultiple
         }
         set {
-            attributedString.lineHeight = newValue
+            attributedString.lineHeightMultiple = newValue
         }
     }
 }

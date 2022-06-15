@@ -46,7 +46,6 @@ class ExampleTableViewController: UITableViewController {
         attributedString.text = "Default"
         attributedString.textColor = .blue
         attributedString.letterSpacing = 12
-        attributedString.lineHeight = 25
         attributedString.textAlignment = .center
 
         label.attributedString = attributedString
@@ -58,7 +57,6 @@ class ExampleTableViewController: UITableViewController {
         attributedString.text = " "
         attributedString.textColor = .green
         attributedString.letterSpacing = 2
-        attributedString.lineHeight = 20
         attributedString.textAlignment = .left
 
         label.attributedString = attributedString

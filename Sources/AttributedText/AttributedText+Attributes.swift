@@ -94,31 +94,13 @@ public extension AttributedText {
         }
     }
 
-    /// Height of each line of text
-    ///
-    /// - Warning:
-    /// Uses `font` in the calculation of line height
-    ///
-    /// - Note:
-    /// Requires `font` to be defined first
-    var lineHeight: CGFloat? {
+    /// Line height multiple of the text
+    var lineHeightMultiple: CGFloat {
         mutating get {
-            guard let font = font else { return nil }
-            return paragraphStyle().lineSpacing + font.lineHeight
+            return paragraphStyle().lineHeightMultiple
         }
         set {
-            guard let font = font else { return }
-
-            var newLineHeight: CGFloat
-            if let lineHeight = newValue {
-                paragraphStyle().lineHeightMultiple = 1
-                newLineHeight = lineHeight
-            } else {
-                paragraphStyle().lineHeightMultiple = .defaultLineHeightMultiple
-                newLineHeight = .defaultLineHeight(for: font)
-            }
-
-            paragraphStyle().lineSpacing = newLineHeight - font.lineHeight
+            paragraphStyle().lineHeightMultiple = newValue
         }
     }
 }

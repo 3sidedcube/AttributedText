@@ -13,7 +13,7 @@ Currently supported properties which map to `NSAttributedString.Key` (See file `
 * `link` (key: `.link`)
 * `textAlignment` (key: `.paragraphStyle` - `.alignment`)
 * `lineBreakMode` (key: `.paragraphStyle` - `.lineBreakMode`)
-* `lineHeight` (key: `.paragraphStyle` - `.lineHeightMultiple` & `.lineSpacing`)
+* `lineHeightMultiple` (key: `.paragraphStyle` - `.lineHeightMultiple`)
 
 `text` is a stored property as it doesn't have corresponding `NSAttributedString.Key` like the others. 
 

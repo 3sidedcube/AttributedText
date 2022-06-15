@@ -26,9 +26,6 @@
 		OBJ_38 /* AttributedText+ParagraphStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AttributedText+ParagraphStyle.swift */; };
 		OBJ_39 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AttributedText.swift */; };
 		OBJ_40 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Attributes.swift */; };
-		OBJ_41 /* CGFloat+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CGFloat+Defaults.swift */; };
-		OBJ_42 /* NSLineBreakMode+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* NSLineBreakMode+Defaults.swift */; };
-		OBJ_43 /* NSTextAlignment+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NSTextAlignment+Defaults.swift */; };
 		OBJ_44 /* UIButton+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* UIButton+AttributedText.swift */; };
 		OBJ_45 /* UILabel+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* UILabel+AttributedText.swift */; };
 		OBJ_46 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AttributedLabel.swift */; };
@@ -60,9 +57,6 @@
 		OBJ_11 /* AttributedText+ParagraphStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedText+ParagraphStyle.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		OBJ_15 /* CGFloat+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_16 /* NSLineBreakMode+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLineBreakMode+Defaults.swift"; sourceTree = "<group>"; };
-		OBJ_17 /* NSTextAlignment+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Defaults.swift"; sourceTree = "<group>"; };
 		OBJ_18 /* UIButton+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AttributedText.swift"; sourceTree = "<group>"; };
 		OBJ_19 /* UILabel+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AttributedText.swift"; sourceTree = "<group>"; };
 		OBJ_21 /* AttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
@@ -98,9 +92,6 @@
 		OBJ_14 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* CGFloat+Defaults.swift */,
-				OBJ_16 /* NSLineBreakMode+Defaults.swift */,
-				OBJ_17 /* NSTextAlignment+Defaults.swift */,
 				OBJ_18 /* UIButton+AttributedText.swift */,
 				OBJ_19 /* UILabel+AttributedText.swift */,
 			);
@@ -142,7 +133,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -152,7 +143,6 @@
 				OBJ_29 /* Example */,
 				OBJ_30 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -244,7 +234,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -288,9 +278,6 @@
 				OBJ_38 /* AttributedText+ParagraphStyle.swift in Sources */,
 				OBJ_39 /* AttributedText.swift in Sources */,
 				OBJ_40 /* Attributes.swift in Sources */,
-				OBJ_41 /* CGFloat+Defaults.swift in Sources */,
-				OBJ_42 /* NSLineBreakMode+Defaults.swift in Sources */,
-				OBJ_43 /* NSTextAlignment+Defaults.swift in Sources */,
 				OBJ_44 /* UIButton+AttributedText.swift in Sources */,
 				OBJ_45 /* UILabel+AttributedText.swift in Sources */,
 				OBJ_46 /* AttributedLabel.swift in Sources */,
